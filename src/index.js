@@ -27,7 +27,7 @@ function getRandomPokemon() {
 }
 
 async function sendTelegramMessage(text) {
-  const url = https://api.telegram.org/bot${TOKEN}/sendMessage;
+  const url = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
   await axios.post(url, {
     chat_id: CHAT_ID,
