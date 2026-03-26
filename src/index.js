@@ -27,7 +27,7 @@ function getRandomPokemon() {
 }
 
 async function sendTelegramMessage(text) {
-  const url = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+  const url = https://api.telegram.org/bot${TOKEN}/sendMessage;
 
   await axios.post(url, {
     chat_id: CHAT_ID,
@@ -93,7 +93,6 @@ async function scanPokemonCenter() {
 
   const pokemon = getRandomPokemon();
 
-  // Always send a check-in message
   await sendTelegramMessage(`✅ Check complete — ${pokemon} is watching Pokémon Center`);
 
   if (results.length === 0) {
@@ -132,4 +131,3 @@ async function main() {
 }
 
 main();
-setInterval(main, 60 * 1000);
